@@ -1,4 +1,6 @@
 export const ballFallArea = document.querySelector(".ball-fall-area");
+export const seesawPlank = document.querySelector(".seesaw-plank");
+export const pivot = document.querySelector(".seesaw-pivot");
 
 export const colors = {
   1: '#8A244B', 2: '#9BC264', 3: '#982598',
