@@ -28,6 +28,8 @@ export function createBall(clickLocX , seesawPlankTopPoint){
     const pivotCenterX = pivotArea.left + pivotArea.width / 2;
     const ballCenterX = ballArea.left + ballArea.width / 2;
 
+    ball.dataset.offsetX = ballCenterX - pivotCenterX;
+    ball.dataset.weight = weight;
     return ball;
 
    })
