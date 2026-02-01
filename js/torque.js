@@ -1,12 +1,9 @@
-import { pivot , seesawPlank } from "./globals.js";
+import { seesawPlank , pivotCenterX , pivotCenterY } from "./globals.js";
 
 export function calculateTorque() {
     const balls = document.querySelectorAll(".ball");
-    const tiltAngle = document.getElementById(".tiltAngle");
-    const pivotArea = pivot.getBoundingClientRect();
-    const pivotCenterX = pivotArea.left + pivotArea.width / 2;
-    const pivotCenterY = pivotArea.top + pivotArea.height / 2;
-
+    const tiltAngle = document.getElementById("tiltAngle");
+ 
     let totalLeftTorque = 0;
     let totalRightTorque = 0;
 

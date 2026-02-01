@@ -1,4 +1,4 @@
-import { pivot } from "./globals.js";
+import { pivotCenterX , leftTotal , rightTotal } from "./globals.js";
 
 let prevBallCount = 0;
 
@@ -7,19 +7,14 @@ export function addValue() {
     if(balls.length === prevBallCount) return;
     prevBallCount = balls.length;
 
-    const leftTotal = document.getElementById("leftTotal");
-    const rightTotal = document.getElementById("rightTotal");
-    const weightLocInfoContainer = document.querySelector(".weight-locations-container");
+    const weightLocInfoContainer = document.querySelector(".weight-location-container");
 
-    const pivotArea = pivot.getBoundingClientRect();
-    const pivotCenterX = pivotArea.left + pivotArea.width / 2;
-    
     let totalLeftWeight = 0;
     let totalRightWeight = 0;
 
     weightLocInfoContainer.innerHTML = "";
 
-    balls.forEach((ball, index) => {
+    balls.forEach((ball) => {
         const ballArea = ball.getBoundingClientRect();
         const ballCenterX = ballArea.left + ballArea.width / 2;
         const weight = Number(ball.textContent)  || 0;

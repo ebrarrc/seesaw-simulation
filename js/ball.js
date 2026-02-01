@@ -1,4 +1,4 @@
-import {colors , sizes, ballFallArea , seesawPlank , pivot} from "./globals.js";
+import {colors , sizes, ballFallArea , seesawPlank , pivotCenterX} from "./globals.js";
 import { saveStorage } from "./storage.js";
 
 let upcomingWeight = Math.floor(Math.random() * 10) + 1;
@@ -28,10 +28,7 @@ export function createBall(clickLocX , seesawPlankTopPoint, isLoading = false, s
    setTimeout(() => {
     ball.style.top = `${seesawPlankTopPoint}px`;
 
-    const pivotArea = pivot.getBoundingClientRect();
     const ballArea = ball.getBoundingClientRect();
-
-    const pivotCenterX = pivotArea.left + pivotArea.width / 2;
     const ballCenterX = ballArea.left + ballArea.width / 2;
 
     if(!isLoading){

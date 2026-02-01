@@ -1,6 +1,11 @@
 export const ballFallArea = document.querySelector(".ball-fall-area");
 export const seesawPlank = document.querySelector(".seesaw-plank");
 export const pivot = document.querySelector(".seesaw-pivot");
+export   const leftTotal = document.getElementById("leftTotal");
+export    const rightTotal = document.getElementById("rightTotal");
+const pivotArea = pivot.getBoundingClientRect();
+export const pivotCenterX = pivotArea.left + pivotArea.width / 2;
+export const pivotCenterY = pivotArea.top + pivotArea.height / 2;
 
 export const colors = {
   1: '#8A244B', 2: '#9BC264', 3: '#982598',

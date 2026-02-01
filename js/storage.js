@@ -1,4 +1,4 @@
-import { ballFallArea , seesawPlank , pivot} from "./globals.js";
+import { ballFallArea , seesawPlank , pivotCenterX} from "./globals.js";
 import { createBall } from "./ball.js";
 
 export function saveStorage(upcomingWeight){
@@ -26,9 +26,6 @@ export function getStorage(upcomingWeight){
     const containerArea = ballFallArea.getBoundingClientRect();
     const seesawPlankArea = seesawPlank.getBoundingClientRect();
     const seesawPlankTopPoint = seesawPlankArea.top - 10;
-
-    const pivotArea = pivot.getBoundingClientRect();
-    const pivotCenterX = pivotArea.left + pivotArea.width / 2;
 
     saved.forEach(element => {
         const clickLocX = (pivotCenterX + element.offset) - containerArea.left;
