@@ -2,6 +2,7 @@ import { pivot , seesawPlank } from "./globals.js";
 
 export function calculateTorque() {
     const balls = document.querySelectorAll(".ball");
+    const tiltAngle = document.getElementById(".tiltAngle");
     const pivotArea = pivot.getBoundingClientRect();
     const pivotCenterX = pivotArea.left + pivotArea.width / 2;
     const pivotCenterY = pivotArea.top + pivotArea.height / 2;
@@ -27,6 +28,8 @@ export function calculateTorque() {
     if(totalLeftTorque === totalRightTorque) angle = 0;
 
     seesawPlank.style.transform = `rotate(${angle}deg)`;
+
+    tiltAngle.textContent = angle + "deg";
 
 
     //topların plank açısına göre konumlarının ayarlanması için
