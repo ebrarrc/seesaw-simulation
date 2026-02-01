@@ -1,0 +1,116 @@
+.container{
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid #576A8F;
+    border-radius: 8px;
+}
+.seesaw-info-boxes{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-color: #576A8F;
+    color: #fff;
+}
+.seesaw-info-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    padding: 5px 10px;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+.seesaw-info-box:hover{
+    background-color: #fff;
+    color: #576A8F;
+}
+.seesaw-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    background-color: #FFF8DE;
+}
+.ball-fall-area{
+    width: 100%;
+    height: 240px;
+    max-width: 400px;
+}
+.ball{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 99;
+    border-radius: 50%;
+    transition: top 1s ease-in;
+}
+.seesaw-plank{
+    width: 400px;
+    height: 20px;
+    position: relative;
+    bottom: 3px;
+    z-index: 9;
+    background-color: #FF7444;
+    transition: transform 1s ease-in;
+}
+.seesaw-pivot{
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 30px 30px 0 0;
+    border-color: #B7BDF7 transparent transparent transparent;
+    transform: rotate(45deg);
+}
+.seesaw-controls{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: #576A8F;
+}
+.seesaw-reset-button{
+    padding: 10px 20px;
+    text-align: center;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    transition: all 0.3s ease-in-out;
+}
+.seesaw-reset-button:hover{
+    background-color: #fff;
+    color: #576A8F;
+}
+.weight-location-infos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 30px 0;
+    background-color: #576A8F;
+    color: #fff;
+    border: none;
+}
+.weight-location-container{
+    width: 90%;
+    height: 200px;
+    background-color: #B7BDF7;
+    border-radius: 8px;
+}
+
+@media screen and (max-width: 768px) {
+    .seesaw-info-boxes{
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .seesaw-info-box{
+        width: 33%;
+    }
+    .seesaw-plank{
+        width: 300px;
+    }
+}
