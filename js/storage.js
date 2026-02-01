@@ -33,13 +33,11 @@ export function getStorage(upcomingWeight){
     saved.forEach(element => {
         const clickLocX = (pivotCenterX + element.offset) - containerArea.left;
 
-        const newBall = createBall(clickLocX, seesawPlankTopPoint , true , item.weight);
+        const newBall = createBall(clickLocX, seesawPlankTopPoint , true , element.weight);
 
-        newBall.dataset.offsetX = item.offset;
-        newBall.dataset.weight = item.weight;
+        newBall.dataset.offsetX = element.offset;
+        newBall.dataset.weight = element.weight;
     });
 }
-
-
 
 getStorage();
