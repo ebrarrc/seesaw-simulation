@@ -25,6 +25,7 @@ export function calculateTorque() {
     if(totalLeftTorque === totalRightTorque) angle = 0;
 
     seesawPlank.style.transform = `rotate(${angle}deg)`;
+    console.log(angle);
 
     tiltAngle.textContent = angle + "deg";
 

@@ -1,3 +1,6 @@
+p{
+    margin: 3px;
+}
 .container{
     width: 100%;
     max-width: 600px;
@@ -16,6 +19,7 @@
 }
 .seesaw-info-box{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 20%;
@@ -37,9 +41,8 @@
     background-color: #FFF8DE;
 }
 .ball-fall-area{
-    width: 100%;
+    width: 50%;
     height: 240px;
-    max-width: 400px;
 }
 .ball{
     display: flex;
@@ -90,6 +93,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 10px;
     padding: 0 0 30px 0;
     background-color: #576A8F;
     color: #fff;
@@ -98,8 +102,11 @@
 .weight-location-container{
     width: 90%;
     height: 200px;
+    padding: 5px;
     background-color: #B7BDF7;
     border-radius: 8px;
+    overflow: scroll;
+    overflow-x: hidden;
 }
 
 @media screen and (max-width: 768px) {

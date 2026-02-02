@@ -46,6 +46,7 @@ export function createBall(clickLocX , seesawPlankTopPoint, isLoading = false, s
 export function displayBall (){
     ballFallArea.addEventListener("click",function(event) {
         const fallArea = ballFallArea.getBoundingClientRect();
+        console.log(fallArea);
         const clickLocX = event.clientX - fallArea.left;
         
         const seesawPlankArea = seesawPlank.getBoundingClientRect();
